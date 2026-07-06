@@ -1,7 +1,9 @@
 name: 01 Events
 
-on: push
-
+#on: [push, pull_request]
+on:
+  pull_request:
+    types: [closed]
 
 jobs:
   print-hello-world:
