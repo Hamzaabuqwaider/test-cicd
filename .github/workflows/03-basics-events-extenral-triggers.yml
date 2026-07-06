@@ -1,4 +1,4 @@
-name: 01 Events
+name: 03-basics-events-extenral-triggers
 
 on:
   repository_dispatch:
