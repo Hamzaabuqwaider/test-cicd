@@ -1,0 +1,12 @@
+name: 01 Events
+
+on:
+  repository_dispatch:
+    types: [custom-event]
+
+jobs:
+  print-hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "Hello World"
