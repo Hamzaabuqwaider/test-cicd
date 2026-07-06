@@ -3,7 +3,9 @@ name: 01 Events
 on:
   push:
 #    branches: [main]
-    branches-ignore: [main]
+#    branches-ignore: [main]
+    tags:
+      - v2
 jobs:
   print-hello-world:
     runs-on: ubuntu-latest
