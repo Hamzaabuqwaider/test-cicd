@@ -1,4 +1,4 @@
-name: 04-basics-events-scheduled
+name: 05-context
 
 on:
   workflow_dispatch
