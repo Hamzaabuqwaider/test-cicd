@@ -1,11 +1,11 @@
-name: 05-context
+name: 04-basics-events-scheduled
 
 on:
-  workflow_dispatch
-
+  schedule:
+    - cron: "*/5 * * * *"
 jobs:
-  print-context-data:
+  print-hello-world:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Context Data
-        run: echo "Context Data"
+      - name: Print Hello World
+        run: echo "Hello World"
