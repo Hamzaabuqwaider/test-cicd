@@ -3,8 +3,8 @@ name: 05-context
 on:
   workflow_dispatch
 jobs:
-  print-hello-world:
+  print-context-data:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Hello World
+      - name: Print Context Data
         run: echo ${{ github.actor }}
