@@ -1,5 +1,5 @@
 name: 05-context
-run-name: Hamza Qwaider explaining context data
+run-name: ${{ github.actor}} explaining context data
 on:
   workflow_dispatch
 
