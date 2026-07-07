@@ -1,0 +1,13 @@
+name: 07-conditions
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  print-context-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "Hello World"
