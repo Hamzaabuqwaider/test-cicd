@@ -8,12 +8,23 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.3
       - name: Install NodeJs
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Install dependencies
+      - name: Copy .env
+        run: cp .env.example .env
+      - name: Install PHP dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress
+      - name: Generate key
+        run: php artisan key:generate
+      - name: Install Node dependencies
         run: npm ci
+      - name: Build assets
+        run: npm run build
       - name: Run tests
-        run: npm test
-
+        run: php artisan test
