@@ -1,4 +1,4 @@
-name: 08 test
+name: deployment
 
 on: push
 
@@ -28,6 +28,7 @@ jobs:
         run: npm run build
       - name: Run tests
         run: php artisan test
+
 
 
   deploy:
