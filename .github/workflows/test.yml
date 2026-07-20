@@ -5,5 +5,5 @@ jobs:
   info:
     runs-on: ubuntu-latest
     steps:
-      - name: Output Github Information
+      - name: Push Test CI/CD
         run: echo "test done"
