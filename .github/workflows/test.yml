@@ -11,10 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Create GitHub Issue
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh issue create \
+            --repo "$GITHUB_REPOSITORY" \
             --title "CI Test Issue" \
             --body "This issue was created automatically by GitHub Actions."
